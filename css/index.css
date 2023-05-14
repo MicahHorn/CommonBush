@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@600&display=swap');
+
+body{
+    font-family: 'Merienda', cursive;
+    overflow-x: hidden;
+}
+
+.top-container{
+    height: 90px;
+    width: 86vw;
+    position: fixed;
+    left: 7%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    color: white;
+    border-style: solid;
+    border-width: 0px 0px 1px 0px;
+    transition: ease all 1s;
+}
+.top-container .links{
+    position: absolute;
+    right: 0px;
+    padding: 25px;
+}
+.top-container .links a{
+    margin: 50px;
+    color: white;
+    text-decoration: none;
+    transition: ease all 1s;
+}
+.top-container h1{
+    transition: ease all 1s;
+}
+.image{
+    position: absolute;
+    background-image: url();
+    background-size: cover;
+    content: '';
+    left: 0;
+    top: -150px;
+    height: 150vh;
+    width: 100vw;
+    z-index: -2;
+}
+.image.active{
+    filter: brightness(50%);
+    opacity: 100%
+}
+
+.quote{
+    color: white;
+    position: absolute;
+    top: 300px;
+    height: 150px;
+    width: 700px;
+    left: 25vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 0px 0px 15px; 
+    opacity: 0%;
+}
+.quote.active{
+    line-height: 50px;
+    letter-spacing: 1.5px;
+    transition: 3s ease;
+    transition-delay: 1s;
+    transform: translateY(-4%);
+    opacity: 98%;
+}
+.loader{
+    position: absolute;
+    z-index: -4;
+    left: 47%;
+    top: 43%;
+}
+@media (max-width: 800px) {
+    .top-container .links{
+        padding: 0px;
+    }
+    .top-container .links a{
+        margin: 15px;
+        font-size: 13px;
+    }
+    .top-container h1{
+        font-size: 24px;
+    }
+}
+@media (max-width: 485px) {
+    .top-container .links{
+        font-size: 85%;
+    }
+    .top-container{
+        position: absolute;
+        top: 0px;
+        height: 55px;
+    }
+}
+@media (max-width: 880px){
+    .quote.active{
+        transform: translateX(-100px);
+        margin: 0px;
+        font-size: 70%;
+        line-height: 30px;
+        letter-spacing: 1px;
+    }
+}
+@media (max-width: 610px){
+    .quote.active{
+        left: 0%;
+    }
+}
